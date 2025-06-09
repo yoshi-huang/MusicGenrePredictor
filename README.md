@@ -1,2 +1,2 @@
-# Music-genre-predictor
+# MusicGenrePredictor
 Music genre predictor by using Transformer

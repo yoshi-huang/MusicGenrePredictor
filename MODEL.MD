@@ -1,7 +1,7 @@
 #  我們如何做出這個成果的？
 
 ## 模型架構
-<center><img src="illustration/model.png" alt="" width="70%"/></center>
+<center><img src="illustration/model.png" alt="" width="30%"/></center>
 
 #### version 0.2.0 : Transformer Encoder
 

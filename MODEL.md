@@ -27,14 +27,15 @@
 | 來源於kaggle公開的音樂風格分類資料集[(2)](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) | 999 | 
 |來源於youtube風格推薦下載|2000|
 |來源於Jamendo申請之API[(3)](https://www.jamendo.com/)|18000|
-<center><img src="illustration/model-report_29.jpg" alt="" width="90%"/></center>
+> Jamendo申請API(已實踐)
+> <center><img src="illustration/model-report_29.jpg" alt="" width="90%"/></center>
 
 ---
 ## 建立資料集及預處理
 
 ### 梅爾頻譜圖(Mel-Spectrogram)
 
-> <left><img src="illustration/model-report_20.jpg" alt="" width="100%"/></left>
+> <left><img src="illustration/model-report_20.jpg" alt="" width="90%"/></left>
 > 我們將梅爾頻譜圖切成**3秒**的段落，以時間作為序列(sequence)輸入模型
 
 | 表現手法     | 意義                        |
@@ -43,10 +44,10 @@
 | Y 軸(縱軸)   | Mel 頻率（Mel Frequency）   |
 | 顏色 / 亮度  | 能量強度（Amplitude or dB）   |
 
----
 > #### v0.1.0 的  MLP 輸入特徵 是什麼？
-> <left><img src="illustration/model-report_14.jpg" alt="" width="100%"/></left>
-> <left><img src="illustration/model-report_15.jpg" alt="" width="100%"/></left>
+> <left><img src="illustration/model-report_14.jpg" alt="" width="90%"/></left>
+>
+> <left><img src="illustration/model-report_15.jpg" alt="" width="90%"/></left>
 
 
 ## 建立模型架構
@@ -64,7 +65,7 @@
 ---
 
 > #### Transformer 的 self-attention 是什麼？
-> <left><img src="illustration/model-report_22.jpg" alt="" width="100%"/></left>
+> <left><img src="illustration/model-report_22.jpg" alt="" width="90%"/></left>
 
 ---
 ### version 0.1.0 : MLP model
@@ -80,4 +81,4 @@
 ### 雙版本成果對比：
 |  version 0.2.0 : Transformer Encoder |  version 0.1.0 : MLP model |
 | ----------------------- | ------------------------- |
- Accuracy 超過80%<center><img src="illustration/model-report_24.jpg" alt="" width="100%"/></center> | Accuracy 78%<center><img src="illustration/model-report_17.jpg" alt="" width="100%"/></center>
+ Accuracy 超過80%<center><img src="illustration/model-report_24.jpg" alt="" width="100%"/></center> | Accuracy 78%<center><img src="illustration/model-report_17.jpg" alt="" width="110%"/></center>

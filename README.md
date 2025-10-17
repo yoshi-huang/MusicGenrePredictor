@@ -1,5 +1,8 @@
 # Music Genre Predictor 「解碼音符」
-### 基於深度學習的音樂風格分析        
+### 基於深度學習的音樂風格分析    
+
+[![GitHub](https://img.shields.io/badge/GitHub-yoshi--huang-black?logo=github)](https://github.com/yoshi-huang)
+[![Discord](https://img.shields.io/badge/Discord-yoshi__huang-5865F2?logo=discord&logoColor=white)](https://discord.com/channels/@me/874233210190573578)
 
 ## 我們做了什麼？
 
@@ -19,3 +22,5 @@
 
 ## 我們的發表報告
 [了解更多...](REPORT.md)
+
+> © 2025 by yoshi-huang  

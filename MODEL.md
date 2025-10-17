@@ -1,7 +1,7 @@
 #  我們如何做出這個成果的？
 
 ## 模型架構
-<center><img src="illustration/model-report (21).png" alt="" width="30%"/></center>
+<center><img src="illustration/model-report_19.png" alt="" width="30%"/></center>
 
 #### version 0.2.0 : Transformer Encoder
 
@@ -16,7 +16,7 @@
 
 ## 模型輸入
 ### 梅爾頻譜圖(Mel-Spectrogram)
-<center><img src="illustration/model-report (19).png" alt="" width="70%"/></center>
+<center><img src="illustration/model-report_17.png" alt="" width="70%"/></center>
 
 | 表現手法     | 意義                        |
 | ----------- | --------------------------|

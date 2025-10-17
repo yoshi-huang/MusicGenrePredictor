@@ -35,8 +35,8 @@
 
 ### 梅爾頻譜圖(Mel-Spectrogram)
 
-> <left><img src="illustration/model-report_20.jpg" alt="" width="90%"/></left>
 > 我們將梅爾頻譜圖切成**3秒**的段落，以時間作為序列(sequence)輸入模型
+> <left><img src="illustration/model-report_20.jpg" alt="" width="90%"/></left>
 
 | 表現手法     | 意義                        |
 | ----------- | --------------------------|

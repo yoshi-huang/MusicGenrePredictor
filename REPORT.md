@@ -1,4 +1,7 @@
-#  我們的發表報告
+#  我們的成果發表報告
+[![Youtube](https://img.shields.io/badge/發表報告錄影__➊-(29:00~)-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=Ls2MlIQ_6Uo)
+[![Youtube](https://img.shields.io/badge/發表報告錄影__➋-(~7:50)-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=Ls2MlIQ_6Uo)
+
 
 <center><img src="illustration/model-report_i.jpg" alt="" width="90%"/></center>
 <center><img src="illustration/model-report_ii.jpg" alt="" width="90%"/></center>

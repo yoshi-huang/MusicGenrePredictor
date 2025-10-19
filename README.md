@@ -8,9 +8,9 @@
 ## 我們做了什麼？
 
 我們以Transformer Encoder作為模型，辨認音樂風格
-<center><img src="illustration/UI.png" alt="" width="70%"/></center>
-<center><img src="illustration/confusion_matrix.png" alt="" width="70%"/></center>
-<center><img src="illustration/training_plot.png" alt="" width="70%"/></center>
+<center><img src="assets/illustration/UI.png" alt="" width="70%"/></center>
+<center><img src="assets/illustration/confusion_matrix.png" alt="" width="70%"/></center>
+<center><img src="assets/illustration/training_plot.png" alt="" width="70%"/></center>
 
 ## 我們為什麼要做這個項目？
 #### 對音樂的熱忱

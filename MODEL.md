@@ -1,9 +1,9 @@
 #  我們如何做出這個成果的？
-<center><img src="illustration/model-report_09.jpg" alt="" width="90%"/></center>
+<center><img src="assets/illustration/model-report_09.jpg" alt="" width="90%"/></center>
 
 ## 搜集音樂資料
 
-<center><img src="illustration/model-report_10.jpg" alt="" width="90%"/></center>
+<center><img src="assets/illustration/model-report_10.jpg" alt="" width="90%"/></center>
 
 資料格式和 Tzanetakis 與 Cook（2002）[(1)](https://www.cs.cmu.edu/~gtzan/work/pubs/tsap02gtzan.pdf) 所使用的資料集形式類似：
 
@@ -28,7 +28,7 @@
 |來源於youtube風格推薦下載|2000|
 |來源於Jamendo申請之API[(3)](https://www.jamendo.com/)|18000|
 > Jamendo申請API(已實踐)
-> <center><img src="illustration/model-report_29.jpg" alt="" width="90%"/></center>
+> <center><img src="assets/illustration/model-report_29.jpg" alt="" width="90%"/></center>
 
 ---
 ## 建立資料集及預處理
@@ -36,7 +36,7 @@
 ### 梅爾頻譜圖(Mel-Spectrogram)
 
 > 我們將梅爾頻譜圖切成**3秒**的段落，以時間作為序列(sequence)輸入模型
-> <left><img src="illustration/model-report_20.jpg" alt="" width="90%"/></left>
+> <left><img src="assets/illustration/model-report_20.jpg" alt="" width="90%"/></left>
 
 | 表現手法     | 意義                        |
 | ----------- | --------------------------|
@@ -45,16 +45,16 @@
 | 顏色 / 亮度  | 能量強度（Amplitude or dB）   |
 
 > #### v0.1.0 的  MLP 輸入特徵 是什麼？
-> <left><img src="illustration/model-report_14.jpg" alt="" width="90%"/></left>
+> <left><img src="assets/illustration/model-report_14.jpg" alt="" width="90%"/></left>
 >
-> <left><img src="illustration/model-report_15.jpg" alt="" width="90%"/></left>
+> <left><img src="assets/illustration/model-report_15.jpg" alt="" width="90%"/></left>
 
 
 ## 建立模型架構
 
 ### version 0.2.0 : Transformer Encoder
 
-<center><img src="illustration/model-report_23.jpg" alt="" width="90%"/></center>
+<center><img src="assets/illustration/model-report_23.jpg" alt="" width="90%"/></center>
 
 | 模型區塊                     | 架構                      | 說明                                                   |
 | --------------------------- | ------------------------- | --------------------------------------------------- |
@@ -65,14 +65,14 @@
 ---
 
 > #### Transformer 的 self-attention 是什麼？
-> <left><img src="illustration/model-report_22.jpg" alt="" width="90%"/></left>
+> <left><img src="assets/illustration/model-report_22.jpg" alt="" width="90%"/></left>
 
 ---
 ### version 0.1.0 : MLP model
 
-<center><img src="illustration/model-report_12.jpg" alt="" width="90%"/></center>
+<center><img src="assets/illustration/model-report_12.jpg" alt="" width="90%"/></center>
 
-<center><img src="illustration/model-report_13.jpg" alt="" width="90%"/></center>
+<center><img src="assets/illustration/model-report_13.jpg" alt="" width="90%"/></center>
 
 ---
 
@@ -81,4 +81,4 @@
 ### 雙版本成果對比：
 |  version 0.2.0 : Transformer Encoder |  version 0.1.0 : MLP model |
 | ----------------------- | ------------------------- |
- Accuracy 超過80%<center><img src="illustration/model-report_24.jpg" alt="" width="100%"/></center> | Accuracy 78%<center><img src="illustration/model-report_17.jpg" alt="" width="110%"/></center>
+ Accuracy 超過80%<center><img src="assets/illustration/model-report_24.jpg" alt="" width="100%"/></center> | Accuracy 78%<center><img src="illustration/model-report_17.jpg" alt="" width="110%"/></center>

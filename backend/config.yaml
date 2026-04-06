@@ -1,0 +1,30 @@
+paths:
+  model_weights:  "transformer_parms.pth"
+  audio_temp_dir: "audio_temp_save"
+  audio_temp_file: "audio_temp_save/temp_audio.mp3"
+  audio_empty_file: "audio_temp_save/empty.mp3"
+  dcbot_chart_dir:    "DCBOT/chart"
+  dcbot_windows_dir:  "DCBOT/chart/windows"
+  dcbot_bar_chart:    "DCBOT/chart/BarChartCanvas"
+  dcbot_spectrogram:  "DCBOT/chart/SpectrogramCanvas"
+
+model:
+  input_dim:  128
+  embed_dim:  128
+  seq_len:    128
+  num_heads:  4
+  num_layers: 6
+  ffn_dim:    256
+  dropout:    0.0
+
+audio:
+  sample_rate:     22050
+  hop_length:      512
+  segment_frames:  128
+  step:            43
+
+dcbot:
+  token: ""
+  command_prefix: "/"
+  chart_window_size: 20
+  runlength_threshold: 5

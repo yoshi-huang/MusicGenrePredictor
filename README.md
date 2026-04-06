@@ -69,7 +69,7 @@ python main.py
 
 以 Transformer Encoder 為核心模型，自動辨識音樂風格，並提供兩種使用介面：
 
-<center><img src="assets/illustration/UI.png" alt="UI" width="70%"/></center>
+<center><img src="assets/illustration/UI.png" alt="UI" width="50%"/></center>
 
 - PyQt5 桌面 GUI（支援本地檔案與 YouTube URL 輸入）
 - Discord Bot（透過指令觸發推論並回傳視覺化結果）
@@ -86,6 +86,8 @@ python main.py
 
 #### 打造開放易用的音樂分類系統
 當今線上音樂與影音平台盛行，大量音樂內容需分類管理。市面上雖有自動辨識音樂風格的工具，但多數不開源或需付費。因此我們希望開發一套自動化的音樂風格分類系統，讓大眾更容易了解並學習自己喜愛的音樂風格。
+
+[成果發表及簡報](REPORT.md)
 
 ---
 

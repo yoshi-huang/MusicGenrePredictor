@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: music-analyzer
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      apt-get update && apt-get install -y ffmpeg
+    startCommand: gunicorn web.app:app --timeout 120 --workers 1 --threads 2
+    plan: free

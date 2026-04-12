@@ -217,14 +217,7 @@ Train/
 │   └── seed.py             # 隨機種子（確保結果可再現）
 ├── logs/                   # 訓練紀錄
 ├── runs/                   # TensorBoard 輸出
-└── main.py                 # 訓練主程式入口
-
-web
-├── static/
-│   ├── index.html           
-│   ├── main.js           
-│   └── style.css             
-└── app.py                 
+└── main.py                 # 訓練主程式入口           
 ```
 
 ---

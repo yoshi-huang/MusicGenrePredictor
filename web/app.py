@@ -5,6 +5,8 @@ Run: python web/app.py  (from project root)
 
 import io
 import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import sys
 import base64
 import tempfile

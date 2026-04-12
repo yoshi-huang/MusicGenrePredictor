@@ -218,6 +218,13 @@ Train/
 ├── logs/                   # 訓練紀錄
 ├── runs/                   # TensorBoard 輸出
 └── main.py                 # 訓練主程式入口
+
+web
+├── static/
+│   ├── index.html           
+│   ├── main.js           
+│   └── style.css             
+└── app.py                 
 ```
 
 ---

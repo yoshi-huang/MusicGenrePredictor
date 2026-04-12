@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: music-analyzer
+    name: MusicGenrePredictor
     env: python
     buildCommand: |
       pip install -r requirements.txt
       apt-get update && apt-get install -y ffmpeg
-    startCommand: gunicorn web.app:app --timeout 120 --workers 1 --threads 2
+    startCommand: gunicorn app:app --chdir web --timeout 120 --workers 1 --threads 2 --threads 2
     plan: free

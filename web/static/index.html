@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>解碼音符 — Music Genre Predictor</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <h1>解碼音符</h1>
+  <p class="subtitle">Music Genre Predictor &nbsp;·&nbsp; Transformer Encoder</p>
+</header>
+
+<div class="main-wrap">
+
+  <!-- input card -->
+  <div class="card">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('url')">YouTube URL</button>
+      <button class="tab" onclick="switchTab('file')">上傳檔案</button>
+    </div>
+
+    <div class="panel active" id="panel-url">
+      <input type="text" id="url-input" placeholder="https://www.youtube.com/watch?v=..." />
+    </div>
+
+    <div class="panel" id="panel-file">
+      <label class="file-label" for="file-input">
+        <span class="icon"></span>
+        選擇 .mp3 / .wav 檔案
+        <span id="file-name">尚未選擇</span>
+      </label>
+      <input type="file" id="file-input" accept=".mp3,.wav" style="display:none"
+             onchange="document.getElementById('file-name').textContent = this.files[0]?.name || '尚未選擇'" />
+    </div>
+
+    <button class="submit" id="analyze-btn" onclick="analyze()">Analyze</button>
+
+    <div id="error-msg"></div>
+
+    <div id="progress-wrap">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+      <div id="progress-label">分析中...</div>
+    </div>
+  </div>
+
+  <!-- results -->
+  <div id="results">
+
+    <!-- top genre -->
+    <div class="result-card" style="margin-bottom:1.25rem">
+      <div class="card-label">預測風格</div>
+      <div class="genre-banner">
+        <span class="genre-icon" id="genre-icon"></span>
+        <span id="top-genre"></span>
+      </div>
+    </div>
+
+    <!-- bar chart + spectrogram side by side -->
+    <div class="charts-grid" style="margin-bottom:1.25rem">
+      <div class="result-card">
+        <div class="card-label">投票分佈</div>
+        <img class="chart-img" id="bar-chart" alt="bar chart" />
+      </div>
+      <div class="result-card">
+        <div class="card-label">Log-Mel 頻譜圖</div>
+        <img class="chart-img" id="spectrogram" alt="spectrogram" />
+      </div>
+    </div>
+
+    <!-- timeline + player -->
+    <div class="result-card" id="player-card">
+      <div class="card-header">
+        <div class="card-label">時間軸風格分段</div>
+        <div class="song-title" id="song-title"></div>
+      </div>
+      <audio id="audio-el" preload="auto" style="display:none"></audio>
+      <div class="timeline-player">
+        <!-- genre segments bar -->
+        <canvas id="timeline-canvas"></canvas>
+        <!-- time labels -->
+        <div id="timeline-labels"></div>
+        <!-- playhead + seek -->
+        <div class="seek-track" id="seek-wrap">
+          <div class="seek-fill" id="seek-fill"></div>
+          <div class="seek-thumb" id="seek-thumb"></div>
+        </div>
+        <!-- controls -->
+        <div class="player">
+          <button class="play-btn" id="play-btn" aria-label="播放/暫停">
+            <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg>
+            <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          </button>
+          <span class="time-cur" id="time-cur">0:00</span>
+          <span class="time-spacer"></span>
+          <span class="time-dur" id="time-dur">0:00</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /results -->
+
+</div><!-- /main-wrap -->
+
+<script src="/static/main.js"></script>
+</body>
+</html>

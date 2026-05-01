@@ -3,7 +3,25 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-yoshi--huang-black?logo=github)](https://github.com/yoshi-huang)
 [![Threads](https://img.shields.io/badge/Threads-@yoshi.wm__-000?logo=threads&logoColor=white)](https://www.threads.com/@yoshi.wm_)
-[![Discord](https://img.shields.io/badge/Discord-yoshi__huang-5865F2?logo=discord&logoColor=white)](https://discord.com/channels/@me/874233210190573578)
+
+>    ```
+>    Contributors :
+>
+>    總負責人 : 
+>        HSNU 161425 黃宥熙
+>
+>    團隊成員 : 
+>        HSNU 161401 莊子函
+>        HSNU 161404 葉采竺
+>        HSNU 161419 陳言碩
+>        HSNU 161425 黃宥熙
+>        HSNU 161430 賴守義
+>        HSNU 161431 魏得洋
+>
+>    顧問指導 : 
+>        柯佳伶 教授 、 李啟龍 主任
+>    ```
+
 
 ---
 

@@ -5,3 +5,5 @@
 .json
 
 tests
+#thanks macOS
+.DS_Store

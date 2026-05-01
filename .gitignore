@@ -1,0 +1,7 @@
+.venv
+.github
+.vscode
+.mp3
+.json
+
+tests

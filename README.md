@@ -46,6 +46,17 @@ pip install -r requirements.txt
 
 ## 使用方式
 
+### 終端輸入
+
+```bash
+python yt_genre.py [url]
+```
+
+分析完成後顯示：
+- 各風格投票長條圖
+- Log-Mel 頻譜圖
+- 時間軸風格分段圖
+
 ### GUI 桌面應用程式
 
 ```bash
@@ -87,7 +98,7 @@ python backend/DCBOT/activate.py
 ```
 
 Bot 會依序回傳：
-- 私訊：分析進度通知（僅觸發者可見）
+- 私訊：分析進度通知
 - 公開：Mel 頻譜圖 + 風格投票長條圖 + 文字結果
 - 公開：音訊檔案（若小於 25 MB）
 - 公開：時間軸分段圖（含 ◀️ / ▶️ 翻頁按鈕）
@@ -127,29 +138,22 @@ python Train/main.py
 │       ├── activate.py         # Discord Bot 指令與事件處理
 │       └── processFunc.py      # 推論流程（模型快取、圖表生成）
 │
-├── Train/
-│   ├── main.py                 # 訓練主程式入口
-│   ├── configs/config.yaml     # 訓練超參數
-│   ├── data/
-│   │   └── dataset.py          # 資料載入與前處理
-│   ├── engine/
-│   │   ├── train.py            # 訓練迴圈
-│   │   └── evaluate.py         # 驗證 / 測試評估
-│   ├── model/
-│   │   └── model.py            # 模型架構定義
-│   ├── utils/
-│   │   ├── config.py           # 訓練設定輔助
-│   │   ├── logger.py           # TensorBoard logger 初始化
-│   │   └── seed.py             # 隨機種子（確保結果可再現）
-│   ├── logs/                   # 訓練紀錄
-│   └── runs/                   # TensorBoard 輸出
-│
-└── web/
-    ├── app.py                  # Web 後端（Flask）
-    └── static/
-        ├── index.html
-        ├── main.js
-        └── style.css
+└── Train/
+    ├── main.py                 # 訓練主程式入口
+    ├── configs/config.yaml     # 訓練超參數
+    ├── data/
+    │   └── dataset.py          # 資料載入與前處理
+    ├── engine/
+    │   ├── train.py            # 訓練迴圈
+    │   └── evaluate.py         # 驗證 / 測試評估
+    ├── model/
+    │   └── model.py            # 模型架構定義
+    ├── utils/
+    │   ├── config.py           # 訓練設定輔助
+    │   ├── logger.py           # TensorBoard logger 初始化
+    │   └── seed.py             # 隨機種子（確保結果可再現）
+    ├── logs/                   # 訓練紀錄
+    └── runs/                   # TensorBoard 輸出
 ```
 
 ---

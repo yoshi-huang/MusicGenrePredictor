@@ -3,7 +3,6 @@
 .vscode
 .mp3
 .json
+.DS_Store
 
 tests
-#thanks macOS
-.DS_Store

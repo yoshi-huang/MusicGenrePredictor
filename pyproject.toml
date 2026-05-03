@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yt-genre"
+version = "0.5.0"
+description = "CLI tool: predict music genre from a YouTube URL or local audio file"
+requires-python = ">=3.10"
+
+dependencies = [
+    # Core ML
+    "torch==2.5.1",
+    "numpy==2.0.2",
+
+    # Audio
+    "librosa==0.11.0",
+    "numba==0.61.0",
+    "yt-dlp==2026.2.4",
+
+    # GUI
+    "PyQt5==5.15.11",
+
+    # Visualization
+    "matplotlib==3.9.2",
+
+    # Discord Bot
+    "discord.py==2.3.2",
+
+    # Config
+    "PyYAML==6.0.1",
+]
+
+[project.optional-dependencies]
+train = [
+    "torch==2.5.1",
+    "numpy==2.0.2",
+    "scikit-learn==1.6.1",
+    "tensorboard==2.20.0",
+    "tqdm==4.67.1",
+]
+
+[project.scripts]
+yt-genre = "yt_genre:main"
+
+# ---------------------------------------------------------------------------
+# Package layout
+#
+#   Source tree                 Installed as
+#   ─────────────────────────   ──────────────────
+#   backend/core/           →   core          (top-level package)
+#   backend/DCBOT/          →   DCBOT         (top-level package)
+#   yt_genre.py             →   yt_genre      (top-level module)
+#
+# NOTE: editable installs (pip install -e .) do NOT honour package-dir for
+#       sub-packages.  Use a regular install (pip install .) for the entry-
+#       point to work correctly.  During development, run directly:
+#           python yt_genre.py <source>
+# ---------------------------------------------------------------------------
+[tool.setuptools]
+py-modules = ["yt_genre"]
+packages   = ["core", "DCBOT"]
+
+[tool.setuptools.package-dir]
+"core"  = "backend/core"
+"DCBOT" = "backend/DCBOT"
+
+[tool.setuptools.package-data]
+# config.yaml and model weights are stored inside backend/core/ so they
+# travel with the "core" package when installed.
+"core" = ["config.yaml", "transformer_parms.pth"]

@@ -7,3 +7,5 @@
 __pycache__
 
 tests
+build
+yt_genre.egg-info

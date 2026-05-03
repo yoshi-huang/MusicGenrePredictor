@@ -21,7 +21,7 @@ def youtube_download(url: str, output_path: str, progress_callback=None) -> str:
     Title is extracted from the download info dict — no extra network request needed.
     """
 
-    print(f'{os.path.splitext(output_path)[0]}')
+    # print(f'{os.path.splitext(output_path)[0]}')
 
     max_pct = [0]
     title_holder = [""]

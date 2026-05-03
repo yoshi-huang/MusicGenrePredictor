@@ -36,8 +36,12 @@ Contributors
 
 ## 環境安裝
 
-```bash
-pip install -r requirements.txt
+```
+# 安裝主程式依賴（CLI / GUI / Discord Bot）
+pip install .
+
+# 額外安裝訓練依賴
+pip install ".[train]"
 ```
 
 > 需額外安裝 [FFmpeg](https://ffmpeg.org/download.html) 並加入系統 PATH，供 yt-dlp 轉換音訊格式使用。
@@ -46,10 +50,40 @@ pip install -r requirements.txt
 
 ## 使用方式
 
-### 終端輸入
+### CLI
+
+支援 YouTube URL 或本機音訊檔案（mp3 / wav / flac …）。
 
 ```bash
-python yt_genre.py [url]
+# YouTube URL
+python yt_genre.py https://youtu.be/...
+
+# 本機檔案
+python yt_genre.py song.mp3
+
+# 安裝後可直接使用 yt-genre 指令
+pip install -e .
+yt-genre song.wav
+```
+
+**選項**
+
+| 選項 | 說明 |
+| :--- | :--- |
+| `--no-chart` | 跳過互動式圖表視窗 |
+| `--save-charts [DIR]` | 將圖表儲存為 PNG（預設目錄：`./yt_genre_charts/`） |
+| `--json` | 以 JSON 格式輸出結果（隱含 `--no-chart` 與 `--quiet`） |
+| `--quiet` / `-q` | 靜音模式，不顯示進度訊息 |
+
+```bash
+# 只輸出文字結果，不開圖表視窗
+yt-genre song.mp3 --no-chart
+
+# 儲存圖表到指定目錄
+yt-genre https://youtu.be/... --save-charts ./output
+
+# JSON 輸出（適合 scripting）
+yt-genre song.mp3 --json
 ```
 
 分析完成後顯示：
@@ -94,7 +128,7 @@ python backend/DCBOT/activate.py
 **3. 使用指令**
 
 ```
-/genre https://www.youtube.com/watch?v=...
+/genre https://www.youtube.com/...
 ```
 
 Bot 會依序回傳：
